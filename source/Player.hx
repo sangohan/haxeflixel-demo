@@ -12,16 +12,16 @@ import flixel.FlxObject;
  */
 class Player extends FlxSprite {
 
-    public var speed:Float = 100;
+    public static var speed:Float = 100;
 
-    public function new(X:Float=0, Y:Float=0) {
+    public function new(X:Float = 0, Y:Float = 0) {
         super(X, Y);
 		loadGraphic(AssetPaths.player__png, true, 16, 16);
         setFacingFlip(FlxObject.LEFT, false, false);
         setFacingFlip(FlxObject.RIGHT, true, false);
-        animation.add("lr", [4,3,5], 8, false);
-        animation.add("d", [1,0,2], 8, false);
-        animation.add("u", [7,6,8], 8, false);
+        animation.add("lr", [3, 4, 3, 5], 6, false);
+        animation.add("d", [0, 1, 0, 2], 6, false);
+        animation.add("u", [6, 7, 6, 8], 6, false);
         drag.x = drag.y = 1600;
         setSize(8, 14);
         offset.set(4, 2);
